@@ -21,15 +21,18 @@ fun getDoubleOrNull(rs: ResultSet, columnName: String): Double? {
 @Service
 class UserService(private val jdbcTemplate: NamedParameterJdbcTemplate) {
 
-    fun list(): List<User> {
-        val columns = "ID, NAME, EMAIL, AMOUNT"
-
+    @Suppress("SqlResolve", "SqlNoDataSourceInspection")
+    fun list(minAmount: Double?): List<User> {
+        val whereClause = minAmount?.let { "WHERE AMOUNT >= :MIN_AMOUNT" } ?: "WHERE 1=1"
         val query = """
-            SELECT $columns
-             FROM USERS;
+            SELECT ID, NAME, EMAIL, AMOUNT
+             FROM USERS
+             $whereClause
             """.trimIndent()
 
-        return jdbcTemplate.query(query) { rs, _ ->
+        val params = minAmount?.let { mapOf("MIN_AMOUNT" to minAmount) } ?: mapOf()
+
+        return jdbcTemplate.query(query, params) { rs, _ ->
             User(
                     id = rs.getInt("ID"),
                     name = rs.getString("NAME"),
