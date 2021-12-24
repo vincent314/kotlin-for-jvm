@@ -40,14 +40,38 @@
         <section data-markdown>
             ## Pourquoi Kotlin ?
 
-            * Expérience développeur
+            #### Expérience développeur
+
             - Cool features + stdlib
             - Code propre
             - Support de l'IDE & outillage
-            * Adoption
+
+            #### Adoption
+
             - Android
             - Projets majeurs (Android, Gradle, Spring, Micronaut, AWS SDK…)
-            * Pas de contre-indication
+
+            #### Pas de contre-indication
+
+        </section>
+        <section data-markdown>
+            <script type="text/template">
+                ## Hello World
+
+                ```java
+                // JAVA
+                public class HelloJava {
+                    public static void main(String[] args) {
+                        System.out.println("Hello World!");
+                    }
+                }
+                ```
+
+                ```kotlin
+                // KOTLIN
+                fun main() = println("Hello World!")
+                ```
+            </script>
         </section>
         <section data-markdown>
             <script type="text/template">
@@ -61,6 +85,11 @@
         </section>
         <section data-markdown>
             ## Migration depuis Java
+
+            * [Delombok](https://projectlombok.org/features/delombok)
+            * Sources mixtes Java / Kotlin
+            * Commencer par les tests unitaires
+            * Conversion automatique IntelliJ (mais à refactorer)
 
         </section>
         <section data-markdown>
