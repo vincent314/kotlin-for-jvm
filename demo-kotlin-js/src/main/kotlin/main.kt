@@ -1,14 +1,13 @@
+import kotlinext.js.require
 import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.html.*
 import kotlinx.html.dom.append
-import kotlinx.html.dom.create
-import kotlinx.html.js.div
 import kotlin.js.Date
 
 fun main() {
-
-    document.body!!.append.div {
+    require("@picocss/pico/css/pico.css")
+    document.body!!.append.main("container") {
         h1 {
             +"Hello Kotlin-JS!"
         }
@@ -16,11 +15,10 @@ fun main() {
             +"Javascript generated from Kotlin"
         }
         footer {
-            +"Current time:"
-            span { id = "currentTime" }
+            +"Current time: "
+            mark { id = "currentTime" }
         }
     }
-
 
     window.setInterval({
         document.getElementById("currentTime")!!.textContent = Date().toTimeString()
