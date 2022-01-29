@@ -54,6 +54,7 @@
 
                 ### Expérience développeur
 
+                - **Courbe d'apprentissage très rapide**
                 - Pleinement interopérable avec la JVM
                 - super fonctionnalités + stdlib
                 - Code propre et plus concis
@@ -61,14 +62,18 @@
 
                 Note:
                 Créé en 2011 par Jetbrains (IntelliJ).
-                Améliore l'expérience utilisateur, mais ≠ aux libs qui manipulent le bytecode, c'est un
+                Pour un développeur Java, apprentissage très rapide !
+                Améliore l'expérience utilisateur, (pas une lib de manipulation le bytecode) c'est un
                 language complet + une stdlib très complète. Concurrencer Scala mais compilation aussi rapide que Java.
+                Interopérabilité avec Java: on peut utiliser toutes les libs Java (sauf lombok).
+                **Avis perso: pas de contre-indication technique à utiliser Kotlin**
             </script>
         </section>
         <section data-markdown>
             <script type="text/template">
                 ## Features
 
+                - Typage fort et inférence
                 - Null safety
                 - Fonctions au premier rang !
                 - Fonctions d'extension, inline, infix
@@ -78,6 +83,7 @@
                 - ...
 
                 Note:
+                Typage fort et inférence de type avec val/var
                 Java8 a introduit le Type Optional, Kotlin introduit les types nullables et non-nullables
                 (dédouble l'arbre des type). Fonctions d'extension: étendre les fonctionnalités sans héritage.
             </script>
@@ -156,19 +162,48 @@
         <section data-markdown>
             ## Exemple 1 : API REST
 
-            - Projet Spring Boot + Kotlin
+            Object: **Lister des utilisateurs selon un filtre**
+
+            - Projet Spring Boot + Kotlin [https://start.spring.io](https://start.spring.io)
             - Controller REST
             - Requête SQL dynamique
             - Tests unitaires avec Mockk
+
+            Note:
+            Créer une API REST pour lister des utilisateurs en fonction d'un critère de filtre.
+            Spring-data: DB H2 initialisée
+
+            Initializer le projet start.spring.io.
+
+            * Simple controller (cf expression body), paramètre nullable
+            * Service: construction de la requête, construction de l'objet User
+            * Commenter/décommenter JAVA/Kotlin style fonction d'extension
+
         </section>
         <section data-markdown>
-            ## Kotlin Multiplatform
+            ## Kotlin Multiplatform 🧪
 
             1. JVM
             1. Android / iOS (KMM)
-            1. Javascript
-            1. Web Assembly 🧪
+            1. Javascript (node ou browser)
+            1. Web Assembly
             1. Native (macos/linux/windows)
+
+            Note:
+            Construire la même application pour des cibles différentes.
+            Couche d'abstraction qui permet de mettre en commun un maximum de code (ex: couches Model et Controller),
+            tout en laissant le minimum de code spécifique à la plateforme (ex: coche View)
+        </section>
+        <section data-markdown>
+            ## Démo Kotlin/JS
+
+            1. Wizard IntelliJ
+            1. Dépendances avec NPM
+            1. Déclaration manuelle des classes et fonctions *externes*
+
+            Note:
+            Application Web (SPA) avec manipulation du DOM. Utilisation de la bibliothèque Dayjs.
+            Déclaration du modèle externe (cf. Typescript)
         </section>
     </div>
 </div>

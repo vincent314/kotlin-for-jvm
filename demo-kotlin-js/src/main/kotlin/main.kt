@@ -3,7 +3,14 @@ import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.html.*
 import kotlinx.html.dom.append
-import kotlin.js.Date
+
+@JsModule("dayjs")
+@JsNonModule
+external fun dayjs(): DayJs // or dynamic
+
+external interface DayJs {
+    fun format(pattern: String): String;
+}
 
 fun main() {
     require("@picocss/pico/css/pico.css")
@@ -21,7 +28,7 @@ fun main() {
     }
 
     window.setInterval({
-        document.getElementById("currentTime")!!.textContent = Date().toTimeString()
+        document.getElementById("currentTime")!!.textContent = dayjs().format("dddd MMMM HH:mm:ss")
     }, 1000)
 
 }

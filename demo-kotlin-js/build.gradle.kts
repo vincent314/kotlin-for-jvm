@@ -14,6 +14,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-html-js:0.7.3")
     implementation("org.jetbrains.kotlin-wrappers:kotlin-extensions:1.0.1-pre.276-kotlin-1.6.0")
     implementation(npm("@picocss/pico", "1.4.2"))
+    implementation(npm("dayjs", "1.10.7"))
 }
 
 kotlin {
