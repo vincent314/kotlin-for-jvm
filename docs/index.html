@@ -35,24 +35,69 @@
             - **+4 ans de Kotlin**
         </section>
         <section data-markdown>
-            ## Questions
+            <script type="text/template">
+                ## Questions
+
+                Note:
+                Qui connaît Kotlin ? Qui l'utilise ? Pourquoi ?
+                Groovy ? Scala ? Language de la JVM ?
+                Et Java ? Qui connaît Lombok, VAVR, Guava ? Pourquoi l'utiliser ?
+            </script>
         </section>
         <section data-markdown>
-            ## Pourquoi Kotlin ?
+            <script type="text/template">
+                ## Pourquoi Kotlin ?
 
-            #### Expérience développeur
+                - Créé en 2011, open source
+                - v1.0 (stable) en 2016
+                - février 2022: v1.6.10
 
-            - Cool features + stdlib
-            - Code propre
-            - Support de l'IDE & outillage
+                ### Expérience développeur
 
-            #### Adoption
+                - Pleinement interopérable avec la JVM
+                - super fonctionnalités + stdlib
+                - Code propre et plus concis
+                - Support de l'IDE & outillage (IntelliJ)
 
-            - Android
-            - Projets majeurs (Android, Gradle, Spring, Micronaut, AWS SDK…)
+                Note:
+                Créé en 2011 par Jetbrains (IntelliJ).
+                Améliore l'expérience utilisateur, mais ≠ aux libs qui manipulent le bytecode, c'est un
+                language complet + une stdlib très complète. Concurrencer Scala mais compilation aussi rapide que Java.
+            </script>
+        </section>
+        <section data-markdown>
+            <script type="text/template">
+                ## Features
 
-            #### Pas de contre-indication
+                - Null safety
+                - Fonctions au premier rang !
+                - Fonctions d'extension, inline, infix
+                - Sealed classes
+                - Data classes
+                - Spread operator, déstructuration
+                - ...
 
+                Note:
+                Java8 a introduit le Type Optional, Kotlin introduit les types nullables et non-nullables
+                (dédouble l'arbre des type). Fonctions d'extension: étendre les fonctionnalités sans héritage.
+            </script>
+        </section>
+        <section data-markdown>
+            <script type="text/template">
+                ## Adoption
+
+                ### Projets majeurs
+
+                - Android
+                - Gradle
+                - Spring
+                - Micronaut
+                - AWS SDK
+
+                Note:
+                Plus connu dans le monde Android, first class language Android depuis 2017 + lib jetpack.
+                Gradle: DSL (Domain Specific Language) en Groovy ou Kotlin
+            </script>
         </section>
         <section data-markdown>
             <script type="text/template">
@@ -61,9 +106,9 @@
                 ```java
                 // JAVA
                 public class HelloJava {
-                    public static void main(String[] args) {
-                        System.out.println("Hello World!");
-                    }
+                public static void main(String[] args) {
+                System.out.println("Hello World!");
+                }
                 }
                 ```
 
@@ -71,6 +116,11 @@
                 // KOTLIN
                 fun main() = println("Hello World!")
                 ```
+
+                Note:
+                --Décompiler depuis le bytecode-- *Pas de magie*
+
+                Classe + Kt. On retrouve du code Java classique
             </script>
         </section>
         <section data-markdown>
@@ -81,16 +131,35 @@
                 1. MOOC Coursera "Kotlin for Java Developers" [https://www.coursera.org/learn/kotlin-for-java-developers](https://www.coursera.org/learn/kotlin-for-java-developers) <!-- .element: style="font-size: 2rem" -->
                 1. Youtube Channel [https://www.youtube.com/c/Kotlin](https://www.youtube.com/c/Kotlin)<!-- .element: style="font-size: 2rem" -->
                 1. Advent of code [https://adventofcode.com](https://adventofcode.com)<!-- .element: style="font-size: 2rem" -->
+
+                Note:
+                **KOANS** est un tutoriel en ligne, parfait pour débuter. Le MOOC est parfait pour consolider les bases du langage.
+                **Le Channel Youtube** est top pour rester au courant des évolutions
+                **Advent of Code** est super pour faire des algos avec le langage. Note perso, utilisez des libs graphiques
+                (JavaFX, FXGL, Lantern, ou **Javascript**) pour faire de la visualization.
             </script>
         </section>
         <section data-markdown>
             ## Migration depuis Java
 
-            * [Delombok](https://projectlombok.org/features/delombok)
-            * Sources mixtes Java / Kotlin
-            * Commencer par les tests unitaires
-            * *Conversion automatique IntelliJ*
+            1. [Delombok](https://projectlombok.org/features/delombok)
+            1. Sources mixtes Java / Kotlin
+            1. Commencer par les tests unitaires (mockK, kotest…)
+            1. *Conversion automatique IntelliJ*
 
+            Note:
+            Kotlin n'aime pas Lombok (annotations compilation). 2 répertoires sources en // (kotlin+java).
+            cf. conf Gradle ou Maven.
+            Sans pertuber le code, migrer les tests unitaires dans une 1ère étape.
+            Copier/coller du java dans un fichier Kotlin, mais refactorer quand même ensuite !
+        </section>
+        <section data-markdown>
+            ## Exemple 1 : API REST
+
+            - Projet Spring Boot + Kotlin
+            - Controller REST
+            - Requête SQL dynamique
+            - Tests unitaires avec Mockk
         </section>
         <section data-markdown>
             ## Kotlin Multiplatform
@@ -100,14 +169,6 @@
             1. Javascript
             1. Web Assembly 🧪
             1. Native (macos/linux/windows)
-        </section>
-        <section data-markdown>
-            ## Exemple 1 : API REST
-
-            - Projet Spring Boot + Kotlin
-            - Controller REST
-            - Requête SQL dynamique
-            - Tests unitaires avec Mockk
         </section>
     </div>
 </div>
