@@ -5,7 +5,6 @@ import kotlinx.html.*
 import kotlinx.html.dom.append
 
 @JsModule("dayjs")
-@JsNonModule
 external fun dayjs(): DayJs // or dynamic
 
 external interface DayJs {
@@ -20,6 +19,10 @@ fun main() {
         }
         p {
             +"Javascript generated from Kotlin"
+        }
+        p {
+            val camelcaseResult = camelcase("camel-cased-string")
+            +"Call Camel Case Javascript library: $camelcaseResult"
         }
         footer {
             +"Current time: "

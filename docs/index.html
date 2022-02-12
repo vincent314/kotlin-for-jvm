@@ -19,6 +19,8 @@
         <section data-markdown>
             # Kotlin pour la JVM
 
+            ![Kotlin](./img/kotlin.svg "kotlin logo")
+
             ## … et au delà !
 
             **Un retour d'expérience**
@@ -95,7 +97,7 @@
                 ### Projets majeurs
 
                 - Android
-                - Gradle
+                - DSL Gradle
                 - Spring
                 - Micronaut
                 - AWS SDK
@@ -106,15 +108,16 @@
             </script>
         </section>
         <section data-markdown>
+            <!-- @formatter:off-->
             <script type="text/template">
                 ## Hello World
 
                 ```java
                 // JAVA
                 public class HelloJava {
-                public static void main(String[] args) {
-                System.out.println("Hello World!");
-                }
+                    public static void main(String[] args) {
+                        System.out.println("Hello World!");
+                    }
                 }
                 ```
 
@@ -128,6 +131,7 @@
 
                 Classe + Kt. On retrouve du code Java classique
             </script>
+            <!-- @formatter:on-->
         </section>
         <section data-markdown>
             <script type="text/template">
@@ -160,7 +164,7 @@
             Copier/coller du java dans un fichier Kotlin, mais refactorer quand même ensuite !
         </section>
         <section data-markdown>
-            ## Exemple 1 : API REST
+            ## Démo 1: API REST
 
             Object: **Lister des utilisateurs selon un filtre**
 
@@ -181,11 +185,11 @@
 
         </section>
         <section data-markdown>
-            ## Kotlin Multiplatform 🧪
+            ## Kotlin Multiplatform 🧪 1/2
 
             1. JVM
             1. Android / iOS (KMM)
-            1. Javascript (node ou browser)
+            1. Javascript
             1. Web Assembly
             1. Native (macos/linux/windows)
 
@@ -195,15 +199,33 @@
             tout en laissant le minimum de code spécifique à la plateforme (ex: coche View)
         </section>
         <section data-markdown>
-            ## Démo Kotlin/JS
+            ## Kotlin multiplatform 🧪 2/2
+
+            ![Kotlin Multiplatform](./img/kotlin-multiplatform.png "kotlin multiplatform diagram")
+        </section>
+        <section data-markdown>
+            ## Kotlin JS
+
+            * Transpilation Kotlin > Javascript
+            * NodeJS ou Navigateur
+            * Utilise l'écosystème Javascript (Webpack, NPM, Yarn)
+            * Interopérable avec les autres libraries
+
+            Frameworks:
+            1. [KVision](https://kvision.io/)
+            1. Kotlin React
+        </section>
+        <section data-markdown>
+            ## Démo 2: Kotlin/JS
 
             1. Wizard IntelliJ
-            1. Dépendances avec NPM
-            1. Déclaration manuelle des classes et fonctions *externes*
+            1. Déclaration manuelle ou automatique (Dukat) des classes et fonctions *externes*
 
             Note:
             Application Web (SPA) avec manipulation du DOM. Utilisation de la bibliothèque Dayjs.
             Déclaration du modèle externe (cf. Typescript)
+            Encore très expérimental, pour de la production je vais préférer une approche plus traditionnelle (ie.
+            VueJS)
         </section>
     </div>
 </div>
