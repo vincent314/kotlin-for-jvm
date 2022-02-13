@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -24,6 +24,14 @@
             ## … et au delà !
 
             **Un retour d'expérience**
+        </section>
+        <section data-markdown>
+            ## Les sources de la présentation
+
+            [https://github.com/vincent314/kotlin-for-jvm](https://github.com/vincent314/kotlin-for-jvm)
+
+            ![Github link](./img/github-link.svg "Github link")
+
         </section>
         <section data-markdown>
             ## Faisons connaissance
@@ -137,16 +145,18 @@
             <script type="text/template">
                 ## Apprentissage
 
-                1. KOANS [https://play.kotlinlang.org/koans/overview](https://play.kotlinlang.org/koans/overview)<!-- .element: style="font-size: 2rem" -->
-                1. MOOC Coursera "Kotlin for Java Developers" [https://www.coursera.org/learn/kotlin-for-java-developers](https://www.coursera.org/learn/kotlin-for-java-developers) <!-- .element: style="font-size: 2rem" -->
-                1. Youtube Channel [https://www.youtube.com/c/Kotlin](https://www.youtube.com/c/Kotlin)<!-- .element: style="font-size: 2rem" -->
-                1. Advent of code [https://adventofcode.com](https://adventofcode.com)<!-- .element: style="font-size: 2rem" -->
+                1. KOANS 🇬🇧[https://play.kotlinlang.org/koans/overview](https://play.kotlinlang.org/koans/overview)<!-- .element: style="font-size: 2rem" -->
+                1. MOOC Coursera "Kotlin for Java Developers" 🇬🇧 [https://www.coursera.org/learn/kotlin-for-java-developers](https://www.coursera.org/learn/kotlin-for-java-developers) <!-- .element: style="font-size: 2rem" -->
+                1. Youtube Channel 🇬🇧[https://www.youtube.com/c/Kotlin](https://www.youtube.com/c/Kotlin)<!-- .element: style="font-size: 2rem" -->
+                1. Advent of code 🇬🇧[https://adventofcode.com](https://adventofcode.com)<!-- .element: style="font-size: 2rem" -->
+                1. [Mini formation 🇫🇷](https://tech.io/playgrounds/28826/formation-kotlin/introduction-a-kotlin)
 
                 Note:
-                **KOANS** est un tutoriel en ligne, parfait pour débuter. Le MOOC est parfait pour consolider les bases du langage.
-                **Le Channel Youtube** est top pour rester au courant des évolutions
-                **Advent of Code** est super pour faire des algos avec le langage. Note perso, utilisez des libs graphiques
+                1.**KOANS** est un tutoriel en ligne, parfait pour débuter. Le MOOC est parfait pour consolider les bases du langage.
+                1.**Le Channel Youtube** est top pour rester au courant des évolutions
+                1.**Advent of Code** est super pour faire des algos avec le langage. Note perso, utilisez des libs graphiques
                 (JavaFX, FXGL, Lantern, ou **Javascript**) pour faire de la visualization.
+                1.**Mini formation que j'ai écrite pour un passage de connaissances sur un changement de mission
             </script>
         </section>
         <section data-markdown>
@@ -185,7 +195,7 @@
 
         </section>
         <section data-markdown>
-            ## Kotlin Multiplatform 🧪 1/2
+            ## Kotlin Multiplatform 🧪 1/3
 
             1. JVM
             1. Android / iOS (KMM)
@@ -195,13 +205,22 @@
 
             Note:
             Construire la même application pour des cibles différentes.
-            Couche d'abstraction qui permet de mettre en commun un maximum de code (ex: couches Model et Controller),
-            tout en laissant le minimum de code spécifique à la plateforme (ex: coche View)
+            **Kotlin Multiplatform Mobile** Application native ios/Android avec le maximum de code
+            commun. Concurrents: Flutter(Dart) ou Ionic(Javascript)
         </section>
         <section data-markdown>
-            ## Kotlin multiplatform 🧪 2/2
+            ## Kotlin multiplatform 🧪 2/3
+
+            ![kotlin everywhere](./img/kotlin-everywhere.jpg)
+        </section>
+        <section data-markdown>
+            ## Kotlin multiplatform 🧪 3/3
 
             ![Kotlin Multiplatform](./img/kotlin-multiplatform.png "kotlin multiplatform diagram")
+
+            Note:
+            Couche d'abstraction qui permet de mettre en commun un maximum de code (ex: couches Model et Controller),
+            tout en laissant le minimum de code spécifique à la plateforme (ex: couche View)
         </section>
         <section data-markdown>
             ## Kotlin JS
@@ -210,10 +229,7 @@
             * NodeJS ou Navigateur
             * Utilise l'écosystème Javascript (Webpack, NPM, Yarn)
             * Interopérable avec les autres libraries
-
-            Frameworks:
-            1. [KVision](https://kvision.io/)
-            1. Kotlin React
+            * Frameworks: [KVision](https://kvision.io/), Kotlin React
         </section>
         <section data-markdown>
             ## Démo 2: Kotlin/JS
