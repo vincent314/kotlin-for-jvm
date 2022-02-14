@@ -82,6 +82,8 @@ kotlin {
                 implementation("io.ktor:ktor-server-netty:$ktorVersion")
                 implementation("io.ktor:ktor-auth:$ktorVersion")
                 implementation("ch.qos.logback:logback-classic:$logbackVersion")
+
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
             }
         }
         val backendTest by getting {
@@ -96,6 +98,7 @@ kotlin {
                 implementation("io.kvision:kvision:$kvisionVersion")
                 implementation("io.kvision:kvision-bootstrap:$kvisionVersion")
                 implementation("io.kvision:kvision-bootstrap-css:$kvisionVersion")
+                implementation("io.kvision:kvision-datacontainer:$kvisionVersion")
             }
             kotlin.srcDir("build/generated-src/frontend")
         }
