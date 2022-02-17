@@ -24,6 +24,12 @@
             ## … et au delà !
 
             **Un retour d'expérience**
+
+            Note:
+            - D'abord un retour d'expérience: utilisation pour backend JAVA Spring
+            mais aussi pour de l'outillage (scripts d'automatisation, interfaces graphiques)
+            - On ira plus loin sur des recherches plus perso sur l'utilisation de Kotlin
+            pour d'autres usages que la JVM
         </section>
         <section data-markdown>
             ## Les sources de la présentation
@@ -36,7 +42,7 @@
         <section data-markdown>
             ## Faisons connaissance
 
-            - **Diplômé en 2003**
+            - **Diplômé de l'IG2I en 2003**
             - **Davidson depuis 2013**
             - **Développeur full-stack** : Java, Kotlin et Javascript
             - **Clients de la métropole Lilloise**
@@ -64,19 +70,21 @@
 
                 ### Expérience développeur
 
+                - langage pragmatique, pour l'industrie
                 - **Courbe d'apprentissage très rapide**
                 - Pleinement interopérable avec la JVM
-                - super fonctionnalités + stdlib
+                - fonctionnalités + stdlib
                 - Code propre et plus concis
                 - Support de l'IDE & outillage (IntelliJ)
 
                 Note:
-                Créé en 2011 par Jetbrains (IntelliJ).
-                Pour un développeur Java, apprentissage très rapide !
-                Améliore l'expérience utilisateur, (pas une lib de manipulation le bytecode) c'est un
-                language complet + une stdlib très complète. Concurrencer Scala mais compilation aussi rapide que Java.
-                Interopérabilité avec Java: on peut utiliser toutes les libs Java (sauf lombok).
-                **Avis perso: pas de contre-indication technique à utiliser Kotlin**
+                - Créé en 2011 par Jetbrains (IntelliJ).
+                - Langage à destination de l'industrie (≠ pas académique)
+                - Pour un développeur Java, apprentissage très rapide !
+                - Améliore l'expérience utilisateur, (pas une lib de manipulation le bytecode) c'est un
+                - language complet + une stdlib très complète. Concurrencer Scala mais compilation aussi rapide que Java.
+                - Interopérabilité avec Java: on peut utiliser toutes les libs Java (sauf lombok).
+                - **pas de contre-indication technique à utiliser Kotlin**
             </script>
         </section>
         <section data-markdown>
@@ -93,9 +101,10 @@
                 - ...
 
                 Note:
-                Typage fort et inférence de type avec val/var
-                Java8 a introduit le Type Optional, Kotlin introduit les types nullables et non-nullables
-                (dédouble l'arbre des type). Fonctions d'extension: étendre les fonctionnalités sans héritage.
+                - Sans rentrer dans les détails, ce qu'il apporte
+                - Typage fort et inférence de type avec val/var
+                - Java8 a introduit le Type Optional, Kotlin introduit les types nullables et non-nullables(dédouble l'arbre des type).
+                - Fonctions d'extension: étendre les fonctionnalités sans héritage.
             </script>
         </section>
         <section data-markdown>
@@ -109,6 +118,7 @@
                 - Spring
                 - Micronaut
                 - AWS SDK
+                - ...
 
                 Note:
                 Plus connu dans le monde Android, first class language Android depuis 2017 + lib jetpack.
@@ -153,12 +163,12 @@
                 1. [Mini formation 🇫🇷](https://tech.io/playgrounds/28826/formation-kotlin/introduction-a-kotlin)
 
                 Note:
-                1.**KOANS** est un tutoriel en ligne, parfait pour débuter. Le MOOC est parfait pour consolider les bases du langage.
-                1.**Le Channel Youtube** est top pour rester au courant des évolutions
-                1.Liens vers les projets majeurs Kotlin (attention Awesome/Resources)
-                1.**Advent of Code** est super pour faire des algos avec le langage. Note perso, utilisez des libs graphiques
+                1. **KOANS** est un tutoriel en ligne, parfait pour débuter. Le MOOC est parfait pour consolider les bases du langage.
+                1. **Le Channel Youtube** est top pour rester au courant des évolutions
+                1. Liens vers les projets majeurs Kotlin (attention Awesome/Resources)
+                1. **Advent of Code** est super pour faire des algos avec le langage. Note perso, utilisez des libs graphiques
                 (JavaFX, FXGL, Lantern, ou **Javascript**) pour faire de la visualization.
-                1.**Mini formation que j'ai écrite pour un passage de connaissances sur un changement de mission
+                1. Mini formation que j'ai écrite pour un passage de connaissances sur un changement de mission
             </script>
         </section>
         <section data-markdown>
@@ -170,10 +180,10 @@
             1. *Conversion automatique IntelliJ*
 
             Note:
-            Kotlin n'aime pas Lombok (annotations compilation). 2 répertoires sources en // (kotlin+java).
-            cf. conf Gradle ou Maven.
-            Sans pertuber le code, migrer les tests unitaires dans une 1ère étape.
-            Copier/coller du java dans un fichier Kotlin, mais refactorer quand même ensuite !
+            1. Kotlin n'aime pas Lombok (annotations compilation).
+            1. 2 répertoires sources en // (kotlin+java). cf. conf Gradle ou Maven.
+            1. Sans pertuber le code, migrer les tests unitaires dans une 1ère étape.
+            1. Copier/coller du java dans un fichier Kotlin, mais refactorer quand même ensuite !
         </section>
         <section data-markdown>
             ## Démo 1: API REST
@@ -232,6 +242,9 @@
             * Utilise l'écosystème Javascript (Webpack, NPM, Yarn)
             * Interopérable avec les autres libraries
             * Frameworks: [KVision](https://kvision.io/), Kotlin React
+
+            Note:
+            En tant que développeur Front, je cherche une alternative à Javascript 👎
         </section>
         <section data-markdown>
             ## Démo 2: Kotlin/JS
@@ -244,6 +257,28 @@
             Déclaration du modèle externe (cf. Typescript)
             Encore très expérimental, pour de la production je vais préférer une approche plus traditionnelle (ie.
             VueJS)
+        </section>
+        <section data-markdown>
+            ## Démo 3: KVision
+
+            1. Wizard IntelliJ
+            1. DSL HTML
+            1. Fullstack !
+            1. Composants riches
+            1. Bootstrap, FontAwesome …
+
+            Note:
+            - Framework parmis tant d'autres
+            - Utilise l'aspect multiplatform pour front+back
+            - Implementation du code de communication front/back
+            - Supporte de nombreux framework Spring, Ktor, Vert.x, Micronaut…
+        </section>
+        <section data-markdown>
+            ## Questions
+
+            [https://github.com/vincent314/kotlin-for-jvm](https://github.com/vincent314/kotlin-for-jvm)
+
+            ![Github link](./img/github-link.svg "Github link")
         </section>
     </div>
 </div>

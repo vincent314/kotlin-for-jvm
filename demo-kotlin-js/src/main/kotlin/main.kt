@@ -8,7 +8,7 @@ import kotlinx.html.dom.append
 external fun dayjs(): DayJs // or dynamic
 
 external interface DayJs {
-    fun format(pattern: String): String;
+    fun format(pattern: String): String
 }
 
 fun main() {
